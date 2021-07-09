@@ -3,9 +3,26 @@
         <title>
             Front end
         </title>
+        
+        <style>
+            h1 {
+                background-color: red;
+            }
+            #h1-color {
+                background-color: green;
+            }
+            .santhosh {
+                color: orange;
+            }
+        </style>
+
+        <link href="styles.css" rel="stylesheet" />
     </head>
     <body>
-        <h1>
+        <h1 class="santhosh">
+            Jagan
+        </h1>
+        <h1 id="h1-color">
             Jagan
         </h1>
         <h2>
@@ -43,5 +60,52 @@
         <a href="https://www.google.com/">South Indian Bank Internet banking</a> -->
 
         <input type="text"/>
+
+        <ul>
+            <!-- Inline style -->
+            <li style="list-style-type: none;">One</li>
+            <li class="santhosh">two</li>
+            <li>three</li>
+            <li class="santhosh">five</li>
+            <li>Five</li>
+        </ul>
+
+        <ol>
+            <li>One</li>
+            <li>two</li>
+            <li>three</li>
+            <li>five</li>
+            <li>Five</li>
+        </ol>
+
+        <!-- http source -->
+        <a href="https://www.google.com">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" />
+        </a>
+        <!-- absolute path -->
+        <img src="D:/Playground/front-end-08-july-2021/images/04-nature_721703848.jpg" alt="Nature"/>
+        <!-- relative paths -->
+        <img src="./images/04-nature_721703848.jpg" />
+        <!-- relative paths -->
+        <img src="../front-end-08-july-2021/images/04-nature_721703848.jpg" />
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>ABC</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>DEF</td>
+                <td>18</td>
+            </tr>   
+            <tr>
+                <td>GHI</td>
+                <td>18</td>
+            </tr>
+        </table>
     </body>
 </html>
