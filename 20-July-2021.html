@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <title>CSS</title>
+    <style>
+        a:visited {
+            color: red;
+        }
+        /* 
+        li:first-child {
+            color: green;
+        }
+
+        li:nth-child(2) {
+            color: brown;
+        } */
+
+        p::first-letter {
+            color: orange;
+        }
+
+        /* pseudo means imaginary or false */
+        .psuedo-element::before {
+            content: ">";
+        }
+
+        .psuedo-element::after {
+            content: "<";
+        }
+
+        [diff="none"] {
+            text-decoration: none;
+        }
+
+        .alternate-band li{
+            list-style-type: none;
+        }
+
+        .alternate-band li:nth-child(2n) {
+            background-color: lightgray;
+        }
+
+        .alternate-band li {
+            padding: 10px;
+            margin-left: 0;
+            font-size: 20px;
+        }
+
+        .alternate-band {
+            border: 1px solid #ccc;
+            margin: 20px;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.google.com" diff>Google</a>
+    <a href="https://www.facebook.com" diff="none">Facebook</a>
+
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+
+    <p>Data</p>
+
+    <p class="psuedo-element">Pseudo element styles</p>
+
+    <ul class="alternate-band">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Fifth</li>
+        <li>Sixth</li>
+    </ul>
+</body>
+
+</html>
