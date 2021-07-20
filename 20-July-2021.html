@@ -36,9 +36,13 @@
             list-style-type: none;
         }
 
-        .alternate-band li:nth-child(2n) {
+        .alternate-band li:not(:nth-child(2n)) {
             background-color: lightgray;
         }
+
+        /* .alternate-band li:nth-child(3n) {
+
+        } */
 
         .alternate-band li {
             padding: 10px;
