@@ -1,0 +1,27 @@
+            /* tag < class < id < inline-style < !important flag */
+            p {
+                color: red;
+            }
+            .para {
+                color: green;
+            }
+            #para {
+                color: orange;
+            }
+
+            span {
+                background-color: red;
+            }
+
+            /* in case of same selector the one in the last gets highest preference */
+            span {
+                background-color: yellow;
+            }
+
+            div {
+                background-color: green;
+            }
+
+            .div {
+                background-color: purple;
+            }

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            CSS
+        </title>
+        <style>
+            /* increasing the selector length to override */
+            div.div {
+                background-color: orange;
+            }
+
+            p.para#para {
+                color: green !important;
+            }
+            
+            p.para {
+                color: orange !important;
+            }
+        </style>
+
+        <link href="plugin.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <!-- inline with !important flag has the highest preference of all -->
+        <p style="color: purple !important" class="para" id="para">Paragraph</p>
+
+        <span>Span data</span>
+
+        <!-- green bg -->
+        <div>Div element</div>
+        <!-- purple bg -->
+        <div class="div">Div element 2</div>
+
+        <!-- I want this to have orange background without changing the html -->
+        <div class="div">Div element 3</div>
+    </body>
+</html>
