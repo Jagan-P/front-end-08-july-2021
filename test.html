@@ -1,10 +1,11 @@
 <html>
-    <head>
-        <title>
-            Jagan
-        </title>
-        <style>
-            h3 {
+
+<head>
+    <title>
+        Jagan
+    </title>
+    <style>
+         h3 {
                 font-size: 300px;
             }
             .sivaram-large-font {
@@ -13,9 +14,62 @@
             #ss {
                 color: brown;
             }
-        </style>
-    </head>
-    <body>
+        /* general descendant */
+        div p {
+            color: red;
+        }
+
+        /* immediate child */
+        div>p {
+            color: green;
+        }
+
+        .general-sibling~li {
+            background-color: green;
+        }
+
+        .immediate-sibling+li {
+            background-color: red;
+        }
+
+        /* psudeo false or imaginary */
+        /* pseudo class */
+        /* https://www.w3schools.com/css/css_pseudo_classes.asp */
+        a:visited {
+            color: red;
+        }
+
+        /* psudeo class selector */
+        ol li:first-child {
+            font-size: 20px;
+        }
+
+        ol li:last-child {
+            font-size: 10px;
+        }
+
+        /* pseudo element selector */
+        /* https://www.w3schools.com/css/css_pseudo_elements.asp */
+        p::first-letter {
+            color: #ff0000;
+            font-size: xx-large;
+        }
+
+        span::before {
+            content: '>';
+        }
+        span::after {
+            content: '<<';
+        }
+
+        /* attibutes are enclosed inside square bracket */
+        [abc='none'] {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
         <!-- DOM element, DOM, tag, elements, html tag -->
         <h1 style="color: red">H1</h1>
         <!-- Inline styles using 'style' attribute -->
@@ -34,16 +88,55 @@
         <!-- inline level elements -->
         <span>Span 1</span>
         <span style="background-color: yellow;">Span 2</span>
+    
+    <div>
+        <span>
+            <p>Para - Grandchild of div</p>
+        </span>
+    </div>
+    <p>para outside div</p>
+    <div>
+        <p>Para - Child of div</p>
+    </div>
 
-        <ul>
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
-        </ul>
+    <ul>
+        <li>One</li>
+        <li class="general-sibling">Two</li>
+        <li>Three</li>
+        <li>Four</li>
+    </ul>
 
-        <ol>
-            <li>One</li>
-            <li>Two</li>
-        </ol>
-    </body>
+    <ul>
+        <li>One</li>
+        <li class="immediate-sibling">Two</li>
+        <li>Three</li>
+        <li>Four</li>
+    </ul>
+
+    <!-- psuedo means false or imaginary -->
+    <!-- https://www.w3schools.com/css/css_pseudo_classes.asp
+        psuedo class -->
+    <a href="https://www.bewakoof.com/mobile-covers-india">Google</a>
+
+    <ol>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Last</li>
+    </ol>
+
+    <span>
+        Pseudo before after
+    </span>
+
+    <!-- attibutes are enclosed inside square bracket and attributes can have values -->
+    <a abc="none" href="https://www.facebook.com">Remove underline</a>
+    <a abc href="https://www.facebook.com">Have an underline</a>
+
+    <!-- 1. Have a list of items
+    2. The list item should not have any bullets or numbers in the front
+    3. The list items should have alternate background colors (preferably lightgray and white)
+    4. Add some padding, margin, make the fonts readable -->
+</body>
+
 </html>
