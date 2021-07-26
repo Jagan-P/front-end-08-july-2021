@@ -1,0 +1,122 @@
+<html>
+
+<head>
+    <title>CSS</title>
+    <style>
+        div {
+            background-color: red;
+            overflow: auto;
+        }
+
+        span {
+            background-color: yellow;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="width: 50%; background-color: orange;">
+        Some lines
+        <span class="left">Content on the left <br> Content on the left </span>
+        <span class="right">Content on the right <br> </span>
+    </div>
+    <div style="height: 100%;width: 50%;">
+        Some lines
+        <span class="left">Content on the left <br> Content on the left </span>
+        <span class="right">Content on the right <br> </span>
+    </div>
+
+    <p style="background-color: green;height: 100px;text-align: center;">Para</p>
+    <p style="background-color: yellow;text-align: right;">Para on right</p>
+
+
+
+
+    <!-- text styles -->
+    <p style="
+    height: 36px;
+    overflow: hidden;
+    ">This line is long. This line is long. This line is long. This line is long. This line is long. This line is long.
+        This line is long. This line is long. This line is long. This line is long. This line is long. This line is
+        long. This line is long. This line is long. This line is long. This line is long. This line is long. This line
+        is long. This line is long. This line is long. This line is long. This line is long. This line is long. This
+        line is long. This line is long. This line is long. This line is long. This line is long. This line is long.
+        This line is long.</p>
+
+    <p style="
+height: 36px;
+overflow: scroll;
+">This line is long. This line is long. This line is long. This line is long. This line is long. This line is long.
+        This line is long. This line is long. This line is long. This line is long. This line is long. This line is
+        long. This line is long. This line is long. This line is long. This line is long. This line is long. This line
+        is long. This line is long. This line is long. This line is long. This line is long. This line is long. This
+        line is long. This line is long. This line is long. This line is long. This line is long. This line is long.
+        This line is long.</p>
+
+
+        <p style="
+    height: 36px;
+    overflow: hidden;
+    ">This line is long. This line is long. This line is long. This line is long. This line is long. This line is long.
+        This line is long. This line is long. This line is long. This line is long. This line is long. This line is
+        long. This line is long. This line is long. This line is long. This line is long. This line is long. This line
+        is long. This line is long. This line is long. This line is long. This line is long. This line is long. This
+        line is long. This line is long. This line is long. This line is long. This line is long. This line is long.
+        This line is long.</p>
+
+        <p style="
+    height: 47px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    ">This line is long. This line is long. This line is long. This line is long. This line is long. This line is long.
+        This line is long. This line is long. This line is long. This line is long. This line is long. This line is
+        long. This line is long. This line is long. This line is long. This line is long. This line is long. This line
+        is long. This line is long. This line is long. This line is long. This line is long. This line is long. This
+        line is long. This line is long. This line is long. This line is long. This line is long. This line is long.
+        This line is long.</p>
+
+        <!-- non-breakable-space -->
+        <span>First&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Second</span>
+        <span>First line
+            Second line
+        </span>
+
+        <p style="word-break: break-all;">This line is very large This line is very large This line is very large This line is very large This line is very large This line isverysldgksjgslkghsdg</p>
+
+        <p style="word-break: keep-all;">This line is very large This line is very large This line is very large This line is very large This line is very large This line isverysldgksjgslkghsdg</p>
+
+        <pre>This line is very large This line is very large This line is very large This line is very large This line is very large This line          isverysldgksjgslkghsdg
+Second line
+        </pre>
+
+        <p style="text-shadow: 5px 9px 3px black;">This is a text with shadow</p>
+
+        <p style="
+    box-shadow: 5px 3px 17px 1px blue;
+">Box shadow for container</p>
+
+<div style="width: 100px;height: 100px;background-color: orange;transform: scale(2);"></div>
+<div style="width: 100px;height: 100px;background-color: orange;transform: scale(0.5) translate(324px, -39px);"></div>
+<div style="width: 100px;height: 100px;background-color: orange;transform: scale(0.5) rotate(45deg)"></div>
+<div style="width: 100px;height: 100px;background-color: orange;transform: scale(0.5) skewX(45deg)"></div>
+<p>para after scale transform</p>
+
+<div style="position: relative; height: 50px;">
+    <p style="position: absolute;background-color: red;z-index: 2;">First absolute content</p>
+    <p style="position: absolute;background-color: green;">Second absolute content</p>
+</div>
+
+<div style="height: 100px;width: 200px;background-color: orange;transition: width 5s;/* width: 10px; *//* height: 5px; */"></div>
+</body>
+
+</html>

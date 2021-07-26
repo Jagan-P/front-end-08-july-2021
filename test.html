@@ -66,6 +66,12 @@
         [abc='none'] {
             text-decoration: none;
         }
+        span {
+            display: block;
+        }
+        span::first-line {
+            color: red;
+        }
     </style>
 </head>
 
@@ -86,7 +92,7 @@
         <div>Div 1</div>
         <div>Div 2</div>
         <!-- inline level elements -->
-        <span>Span 1</span>
+        <span>Span 1 <br/> Span line 2</span>
         <span style="background-color: yellow;">Span 2</span>
     
     <div>
