@@ -1,0 +1,23 @@
+/* tag < class < id < inline-style < !important flag */
+#para {
+    background-color: orange;
+}
+p#para {
+    background-color: green;
+}
+.para {
+    color: orange;
+}
+.para {
+    color: purple;
+}
+p {
+    color: red;
+}
+p {
+    color: yellow;
+}
+p {
+    color: green;
+    background-color: green;
+}
