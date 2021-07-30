@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Responsive</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .input {
+                width: 100%;
+            }
+            div {
+                display: inline-block;
+                height: 100px;
+                width: 25%;
+            }
+            div:nth-child(odd) {
+                background-color: red;
+            }
+            div:nth-child(even) {
+                background-color: yellow;
+            }
+            @media screen and (max-width: 500px) {
+                div {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" class="input"/>
+        <input type="text" class="input"/>
+        <input type="text" class="input"/>
+
+
+        <div></div><div></div><div></div><div></div>
+    </body>
+</html>
