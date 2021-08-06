@@ -42,9 +42,49 @@
                 console.log(i);
             }
 
+            let counter=10;
+            while(counter<10) {
+                console.log("counter",counter);
+                counter++;
+            }
+
+            let counterDoWhile=10;
+            do {
+                console.log("counterDoWhile",counterDoWhile);
+                counterDoWhile++;
+            } while(counterDoWhile<10);
+
             // task
 
             // I need to print numbers divisible by 2 and 3 until 100
+            for(let i=1; i<100; i++) {
+                if(i%3 == 0 && i%2==0) {
+                    console.log(i);
+                }
+            }
+
+            // difference between let, var and const
+            // var is a global variable
+            // let is a local variable
+            // const is also global but its value cannot be changed
+
+            if(true) {
+                var abc="jagan";
+                console.log(abc);
+            }
+            abc="new jagan";
+            console.log(abc);
+
+            if(true) {
+                let def="happy";
+                console.log(def);
+            }
+            // console.log(def);
+
+            const ghi = "sad";
+            console.log(ghi);
+            ghi = "not sad";
+            console.log(ghi);
         </script>
     </body>
 </html>
