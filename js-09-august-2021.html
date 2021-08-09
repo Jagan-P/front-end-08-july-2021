@@ -66,6 +66,34 @@
             for(let i=0; i<a.length; i++) {
                 console.log("inside for loop",a[i]);
             }
+
+            console.log(a.length);
+
+            a.push(100);
+
+            console.log(a.length,a);
+
+            a.pop();
+
+            console.log(a.length,a);
+
+            // simple search inside array
+            // find index of 14
+            for(let i=0; i<a.length; i++) {
+                if(a[i]==15) {
+                    console.log("15 is present at",i);
+                }
+            }
+
+            // task
+            // I have an array of booleans
+            // My output should be true only if all the booleans are true
+
+            // 1. [true, false, true, true] => false
+            // 2. [true, true, true, true] => true
+
+            // I can have any number of elements in the Array
+            // You shouldn't change your code everytime
         </script>
     </body>
 </html>
