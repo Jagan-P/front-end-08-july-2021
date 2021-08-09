@@ -53,13 +53,88 @@
             console.log("!true",!true);
 
             var a = 0;
-            var b = 0;
+            var b = 1;
             var c = 1;
             var d = 0;
 
             console.log(a==b && b==c && c==d);
 
             console.log(typeof a);
+
+
+            // conditional statements
+            // 1. if else
+            // 2. switch
+
+            if(a==b) {
+                console.log("a is equal to b");
+            }
+            else if(b==c) {
+                console.log("b is equal to c");
+            }
+            else {
+                console.log("a is not equal to b and b is not equal to c");
+            }
+
+            switch(2) {
+                case 1:
+                    console.log("case 1");
+                    // break;
+                case 2:
+                    console.log("case 2");
+                    // break;
+                case 3:
+                    console.log("case 3");
+            }
+
+            switch("e") {
+                case "a":
+                    console.log("case a");
+                    // break;
+                case "b":
+                    console.log("case b");
+                    // break;
+                case "c":
+                    console.log("case c");
+                default:
+                    console.log("none of the case passed")
+            }
+
+            // loops
+            // 1. for loop
+            // 2. while loop
+            // 3. do while loop
+
+            // start; end condition; increment or decrement
+            for(let i=0; i<10; i++) {
+                console.log("for loop",i);
+            }
+
+            // for(let i=10; i>=0; i--) {
+            //     console.log("for loop",i);
+            // }
+
+            for(let i=10; i>=0; i=i-2) {
+                console.log("for loop",i);
+            }
+
+            let counter=10;
+            while(counter<10) {
+                console.log(counter);
+                counter++;
+            }
+
+            let counterDo = 10;
+            do {
+                console.log("counterDo",counterDo);
+                counterDo++;
+            } while(counterDo<10);
+
+            // task
+            // 1. print even numbers from 1 to 100
+            // 2. print odd numbers from 1 to 100
+            // 3. print even numbers from 100 to 1
+            // 4. print odd numbers from 100 to 1
         </script>
     </body>
 </html>
