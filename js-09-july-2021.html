@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>JS</title>
+    </head>
+    <body>
+        <script>
+            if(true) {
+                var a = "hello";
+            }
+            console.log(a);
+
+            // var a;
+            // value of a here is not known
+            // if(true) {
+            //     a = "hello";
+            // }
+            // console.log(a);
+
+            var c;
+            // value of v here is not known
+            console.log(c);
+            if(true) {
+                c = "hello c";
+            }
+            console.log(c);
+
+            if(true) {
+                let b = "hello b";
+                console.log("value of b inside if", b);
+            }
+            // console.log(b);
+
+
+            // primitive data types:
+            // 1. number
+            // 2. string
+            // 2. boolean
+            
+
+            // composite data types:
+            // 1. array
+            // 2. objects or maps
+
+            var a = [10,11,12,13,14,15,16];
+            var b = ["sun","mon","tue"];
+            var c = [0,"sun",true];
+
+            console.log("a[-1]",a[-1]);
+
+            console.log("a[0]",a[0]);
+            console.log("a[1]",a[1]);
+            console.log("a[2]",a[2]);
+            console.log("a[3]",a[3]);
+
+            console.log("b[0]",b[0]);
+            console.log("b[1]",b[1]);
+            console.log("b[2]",b[2]);
+            console.log("b[3]",b[3]);
+
+            console.log("c[0]",c[0]);
+            console.log("c[1]",c[1]);
+            console.log("c[2]",c[2]);
+            console.log("c[3]",c[3]);
+
+            console.log("a.length",a.length)
+            for(let i=0; i<a.length; i++) {
+                console.log("inside for loop",a[i]);
+            }
+        </script>
+    </body>
+</html>
