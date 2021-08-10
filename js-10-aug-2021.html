@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>JS</title>
+    </head>
+    <body>
+        <script>
+            let a = [true, true, true, true];
+            let result=a[0];
+            for(let i=0; i<a.length; i++) {
+                result = result&&a[i];
+            }
+            console.log(result);
+
+            // output should be true if any of the elements is true
+
+            var b = [false, false, true, false];
+            var res = b[0];
+            for(let i=0; i<b.length; i++) {
+                res = res || b[i];
+            }
+            console.log(res);
+
+            // my output is true if all odd indexes are true and even indexes are false;
+            // [false, true, false, true, false, true] => true;
+            // [false, false, true, false, true] => false;
+        </script>
+    </body>
+</html>
