@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>JS</title>
+    </head>
+    <body>
+        <script>
+            var a = ["ABC", 10];
+
+            var b = {
+                "name": "ABC",
+                "age": 10
+            }
+
+            console.log(a[0]);
+
+            console.log(b.name, b["name"])
+
+            var key = "name";
+            console.log(b[key]);
+
+            for(let i=0; i<a.length; i++) {
+                console.log(a[i]);
+            }
+
+            let keysOfb = Object.keys(b);
+            for(let i=0; i<keysOfb.length; i++) {
+                console.log(b[keysOfb[i]]);
+            }
+
+            if(typeof a=="object" && typeof a.length=="number") {
+                console.log("a is an array");
+            }
+            else if(typeof a=="object") {
+                console.log("a is an object");
+            }
+
+            if(typeof b=="object" && typeof b.length=="number") {
+                console.log("b is an array");
+            }
+            else if(typeof a=="object") {
+                console.log("b is an object");
+            }
+
+            var nestArr = [1,2,3, [10,20,30]];
+            var nestObj = {
+                "name": "ABC",
+                "details": {
+                    "age": 10,
+                    "number": "123456"
+                }
+            }
+
+            console.log(nestArr);
+            console.log(nestObj);
+
+
+            // Functions
+            // A function is used to run something repeatedly
+            // 1. Function with argument and with return type
+            // 2. Function with argument and without return type
+            // 3. Function without argument and with return type
+            // 4. Function without argument and without return type
+
+            // function definition
+            function withoutArgumentWithoutReturn() {
+                console.log("abc");
+            }
+
+            // function call
+            withoutArgumentWithoutReturn();
+
+            function withoutArgumentWithReturnType() {
+                console.log("withoutArgumentWithReturnType")
+                return "hello";
+            }
+
+            // var resFun = withoutArgumentWithReturnType();
+            console.log(withoutArgumentWithReturnType());
+
+            // arguments, parameters etc.
+            function withArgumentWithoutReturnType(num) {
+                console.log(num);
+            }
+
+            withArgumentWithoutReturnType(100);       
+            
+            function addNumbers(num1, num2) {
+                return num1+num2;
+            }
+
+            console.log(addNumbers(10,20));
+            console.log(addNumbers(100,200));
+            console.log(addNumbers(10,200));
+
+            //task
+            // print all prime numbers between 1 to 100 and use a function for this program
+        </script>
+    </body>
+</html>

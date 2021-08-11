@@ -4,8 +4,8 @@
     </head>
     <body>
         <script>
-            let a = [true, true, true, true];
-            let result=a[0];
+            var a = [true, true, true, true];
+            var result=a[0];
             for(let i=0; i<a.length; i++) {
                 result = result&&a[i];
             }
@@ -23,6 +23,29 @@
             // my output is true if all odd indexes are true and even indexes are false;
             // [false, true, false, true, false, true] => true;
             // [false, false, true, false, true] => false;
+
+            var a =  [false, true, false, true, false, false];
+            var result = true;
+            for(let i=0; i<a.length; i++) {
+                if(i%2==0) {
+                    if(a[i]==false) {
+                        result = result && true;
+                    }
+                    else {
+                        result = result && false;
+                    }
+                }
+
+                if(i%2!=0) {
+                    if(a[i]==true) {
+                        result = result && true;
+                    }
+                    else {
+                        result = result && false;
+                    }
+                }
+            }
+            console.log(result);
         </script>
     </body>
 </html>
