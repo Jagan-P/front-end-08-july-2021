@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>JS</title>
+    </head>
+    <body>
+        <p>Para1</p>
+        <p id="id">Para2</p>
+        <!-- the below para cannot be retrieved with id because it has duplicate id -->
+        <p id="id">Para5</p>
+        <p class="class-name">Para3</p>
+        <p class="class-name">Para6</p>
+        <p name="name">Para4</p>
+        <script>
+            for(let i=1;i<100;i++) {
+                // console.log(i);
+                if(isPrime(i)) {
+                    console.log(i);
+                }
+            }
+
+            function isPrime(number) {
+                let isPrime = true;
+                for(let i=2; i<number; i++) {
+                    if(number%i==0) {
+                        isPrime = false;
+                    }
+                }
+                return isPrime;
+            }
+
+
+            // arrays and objects are assigned by reference
+            var arr = [1,2,3];
+            var abc = arr;
+            var jag = [...arr];
+            var ki = JSON.parse(JSON.stringify(arr));
+
+            arr[0]=100;
+            console.log(arr);
+            console.log(abc);
+            console.log(jag);
+            console.log(ki);
+
+
+            var def = 0;
+            var ghi = def;
+            def = 10;
+            console.log(def);
+            console.log(ghi);
+
+            let paras = document.getElementsByTagName("p");
+            console.log(document.getElementById("id"));
+            console.log(document.getElementsByClassName("class-name"));
+            console.log(document.getElementsByName("name"));
+
+            // paras[0].
+
+            for(let para of paras) {
+                para.style.background="red";
+                console.log(para.innerText);
+            }
+
+            for(let i=0; i<paras.length; i++) {
+                if(i%2==0) {
+                    paras[i].style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>
