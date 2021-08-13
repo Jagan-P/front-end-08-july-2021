@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>
+            JS
+        </title>
+    </head>
+    <body>
+        <input id="name" value="Jagan" type="text" placeholder="Enter you name"/>
+        <input value="97" type="number" />
+
+        <select>
+            <option value="0">Option A</option>
+            <option value="b">Option B</option>
+            <option value=";" selected>Option C</option>
+        </select>
+
+        <label>Male</label>
+        <input checked name="gender" type="radio" />
+        <label>Female</label>
+        <input name="gender" type="radio" />
+
+        <label>Cricket</label>
+        <input checked name="hobbies" type="checkbox" />
+        <label>Cycling</label>
+        <input checked name="hobbies" type="checkbox" />
+
+        <textarea rows=5 cols=100>abc</textarea>
+
+
+        <!-- getting values from form fields -->
+        <script>
+            // querySelectorAll returns all the matches
+            console.log(document.querySelectorAll("#name"));
+            console.log(document.querySelectorAll("input"));
+            // querySelector returns only the first match
+            console.log(document.querySelector("input"));
+            
+            
+            // for input type="text" or "number" or select
+            console.log(document.getElementById("name").value);
+            console.log(document.getElementsByTagName("select")[0].value);
+            console.log(document.getElementsByTagName("textarea")[0].value);
+
+            var genderInputs = document.getElementsByName("gender");
+            console.log(genderInputs);
+            for(gender of genderInputs) {
+                if(gender.checked) {
+                    console.log(gender.previousElementSibling.innerText);
+                }
+            }
+
+            var hobbyInputs = document.getElementsByName("hobbies");
+            console.log(hobbyInputs);
+            for(hobby of hobbyInputs) {
+                if(hobby.checked) {
+                    console.log(hobby.previousElementSibling.innerText);
+                }
+            }
+            
+        </script>
+
+        <!-- settings values to the form fields -->
+        <script>
+            // for input type="text" or "number" or select
+            document.getElementById("name").value = "New Name";
+            document.getElementsByTagName("select")[0].value = "b";
+
+            var genderInputs = document.getElementsByName("gender");
+            console.log(genderInputs);
+            for(gender of genderInputs) {
+                if(gender.previousElementSibling.innerText == "Female") {
+                   gender.checked = true;
+                }
+            }
+
+            var hobbyInputs = document.getElementsByName("hobbies");
+            console.log(hobbyInputs);
+            for(hobby of hobbyInputs) {
+                hobby.checked = false;
+            }
+
+            document.getElementsByTagName("textarea")[0].value = "new abc";
+        </script>
+    </body>
+</html>
