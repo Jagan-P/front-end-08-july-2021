@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>
+            Sign up
+        </title>
+    </head>
+    <body>
+        <!-- task -->
+        <!-- 1. Build a signup form
+        2. It should have name, age, gender, state and district name
+        3. Use suitable fields as follows text, number, radio, select, select
+        4. On choosing a state the suitable districts alone should be seen in the districts dropdown
+        5. Have a submit button.
+        6. The submit button should be disabled on load.
+        7. Only when all the fields are valid my submit button should be enable
+        8. Optionally show appropriate error messages under the fields -->
+
+        <input type="text" placeholder="Enter your name" onkeyup="inputChange(event)"/>
+        <input type="number" placeholder="Enter your age" onkeydown="inputChange(event)"/>
+        <label>Male</label>
+        <input type="radio" name="gender" onchange="inputChange(event)"/>
+        <label>Female</label>
+        <input type="radio" name="gender" onchange="inputChange(event)"/>
+           
+        <select id="state" onchange="stateChange()">
+            <option value="">Choose a state</option>
+            <option value="s_a">State A</option>
+            <option value="s_b">State B</option>
+        </select>
+
+        <select id="district">
+
+        </select>
+
+        <script>
+            function inputChange(event) {
+                console.log(event.target.value);
+                console.log(event.target.checked);
+            }
+            function stateChange() {
+                let stateDistrictMap = {
+                    "s_a": {
+                        "d_1": "District 1",
+                        "d_2": "District 2"
+                    },
+                    "s_b": {
+                        "d_3": "District 3",
+                        "d_4": "District 4"
+                    }
+                }
+                let choosenState = document.getElementById("state").value;
+                // let possibleDistricts = stateDistrictMap[choosenState];
+                let districtKeys = Object.keys(stateDistrictMap[choosenState]);
+                console.log(districtKeys);
+                let districtString = "";
+                
+                for(let district of districtKeys) {
+                    console.log(districtString);
+                    districtString+="<option value='"+district+"'>"+stateDistrictMap[choosenState][district]+"</option>"
+                }
+                console.log(document.getElementsByTagName("select"));
+                console.log(districtString);
+                document.getElementById("district").innerHTML = districtString;
+            }
+
+        </script>
+    </body>
+</html>
