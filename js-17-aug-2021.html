@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>JS</title>
+  </head>
+  <body>
+    <img
+      src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__480.jpg"
+    />
+    <button onclick="abc(event, 'button1', 10)">Button</button>
+    <input type="text" onkeyup="abc(event)" />
+
+    <button id="dynamic">Event through javascript</button>
+
+    <input type="text" placeholder="Enter to search" onkeyup="filter(event)" />
+    <ul>
+      <li>Abc</li>
+      <li>DAbc</li>
+      <li>GEF</li>
+    </ul>
+    <script>
+      function abc(njk, string, number) {
+        console.log("clicked", njk, string, number);
+      }
+      // console.log(document.getElementById("dynamic"))
+      document.getElementById("dynamic").addEventListener("click", function () {
+        console.log("dynamic click");
+      });
+
+      document.getElementById("dynamic").addEventListener("mouseover", abc);
+
+      document.getElementById("dynamic").removeEventListener("mouseover", abc);
+
+      let customEvent = new Event("actionA");
+
+      document
+        .getElementById("dynamic")
+        .addEventListener("actionA", function () {
+          console.log("actionA performed");
+        });
+
+      document.getElementById("dynamic").dispatchEvent(customEvent);
+
+      window.onload = function () {
+        console.log("window is loaded");
+        console.log(document.getElementsByTagName("img")[0].clientHeight);
+      };
+
+      window.onscroll = function () {
+        console.log("window is scrolled");
+      };
+
+      function filter(event) {
+        let value = event.target.value;
+        let listItems = document.getElementsByTagName("li");
+        for (let item of listItems) {
+        //   if (item.innerText.toLowerCase().startsWith(value.toLowerCase())) {
+        //     item.style.display = "block";
+        //   } else {
+        //     item.style.display = "none";
+        //   }
+            if (item.innerText.toLowerCase().indexOf(value.toLowerCase())>-1) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        }
+        //input box is empty
+        if (value.length == 0) {
+          for (let item of listItems) {
+            item.style.display = "block";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
