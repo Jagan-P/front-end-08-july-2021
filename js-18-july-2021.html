@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>
+            JS
+        </title>
+    </head>
+    <body>
+        <form action="https://jsonplaceholder.typicode.com/posts" method="POST">
+            <input type="text" name="email" value="Jagan"/>
+            <p id="email-error"></p>
+            <input type="number" name="age" value=10/>
+            <select name="option">
+                <option value="a">Option A</option>
+            </select>
+
+        </form>
+        <button onclick="validate()">Submit</button>
+
+
+        <ul id="title-list">
+
+        </ul>
+        <script>
+            // All the below blocks the execution until "OK" or "Cancel" is pressed, so not used commonly
+            // alert("Hey. How are you?");
+            // console.log("out");
+            // let abc = prompt("What is your name?");
+            // console.log(abc);
+            // let result = confirm("Are you sure you want to delete?");
+            // console.log(result);
+        </script>
+        <script>
+            document.cookie = "username=John Doe";
+            // document.cookie = "click=9; expires=Wed, 18 Aug 2021 15:00:00 UTC";
+            document.cookie = "click=9";
+            console.log(document.cookie);
+            document.cookie = "click=10";
+            console.log(document.cookie);
+        </script>
+        <script>
+            // document.getElementsByTagName("button")[0].disabled=true;
+            function validate() {
+
+                let email = document.getElementsByTagName("input")[0].value;
+                
+                if(email.indexOf("@")>-1) {
+                    document.getElementsByTagName("form")[0].submit();
+                }
+                else {
+                    document.getElementById("email-error").innerText="Invalid email"
+                }
+            }
+            // function validate() {
+
+            //     let email = document.getElementsByTagName("input")[0].value;
+
+            //     if(email.indexOf("@")>-1) {
+            //         const xhttp = new XMLHttpRequest();
+            //         xhttp.onload = function() {
+            //             let dataFromServer = JSON.parse(this.responseText);
+            //             let string="";
+            //             for(let data of dataFromServer) {
+            //                 console.log(data.title);
+            //                 string+="<li>"+data.title+"</li>"
+            //             }
+            //             document.getElementById("title-list").innerHTML=string;
+            //         }
+            //         xhttp.open("POST", "https://jsonplaceholder.typicode.com/posts", true);
+            //         xhttp.send(JSON.stringify({name: "abc"}));
+            //     }
+            //     else {
+            //         document.getElementById("email-error").innerText="Invalid email"
+            //     }
+            // }
+        </script>
+
+        <script>
+            function loadDoc() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    let dataFromServer = JSON.parse(this.responseText);
+                    let string="";
+                    for(let data of dataFromServer) {
+                        console.log(data.title);
+                        string+="<li>"+data.title+"</li>"
+                    }
+                    document.getElementById("title-list").innerHTML=string;
+                }
+                xhttp.open("GET", "https://jsonplaceholder.typicode.com/posts", true);
+                xhttp.send();
+            }
+            loadDoc();
+        </script>
+    </body>
+</html>
