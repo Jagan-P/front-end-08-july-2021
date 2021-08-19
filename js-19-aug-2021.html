@@ -3,6 +3,25 @@
         <title>
             JS
         </title>
+        <style>
+            .container ul {
+                display: inline-block;
+                list-style-type: none;
+                border: 1px solid lightgray;
+                padding-left: 0;
+            }
+            .container li:nth-child(odd) {
+                background-color: white;
+            }
+            .container li:nth-child(even) {
+                background-color: lightgray;
+            }
+            .container li {
+                padding: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        </style>
     </head>
     <body>
         <ul>
@@ -32,6 +51,7 @@
                 <li>Green</li>
             </ul>
         </div>
+        <button onclick="removeRedList()">Eliminate Red</button>
         <script>
             let liString = "";
             for(let i=0;i<10;i++) {
@@ -47,6 +67,17 @@
             document.getElementById("liDOM").insertBefore(li,document.querySelector("#liDOM li")[0]);
 
             console.log(document.querySelectorAll("#liDOM li")[0].nextElementSibling.nextElementSibling.innerText);
+        </script>
+        <script>
+            function removeRedList() {
+                let li = document.querySelectorAll(".container li");
+                for(let item of li) {
+                    if(item.innerText=="Red") {
+                        item.parentElement.style.visibility="hidden";
+                        // item.parentElement.style.display="none";
+                    }
+                }
+            }
         </script>
     </body>
 </html>
