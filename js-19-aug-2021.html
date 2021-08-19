@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>
+            JS
+        </title>
+    </head>
+    <body>
+        <ul>
+
+        </ul>
+
+        <ul id="liDOM">
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+        </ul>
+
+        <div class="container">
+            <ul>
+                <li>Red</li>
+                <li>Yellow</li>
+                <li>Green</li>
+            </ul>
+            <ul>
+                <li>Purple</li>
+                <li>Yellow</li>
+                <li>Green</li>
+            </ul>
+            <ul>
+                <li>Red</li>
+                <li>Yellow</li>
+                <li>Green</li>
+            </ul>
+        </div>
+        <script>
+            let liString = "";
+            for(let i=0;i<10;i++) {
+                liString+="<li>"+i+"</li>"
+            }
+            document.getElementsByTagName("ul")[0].innerHTML = liString;
+        </script>
+        <script>
+            let li = document.createElement("li");
+            li.innerText = "0";
+            li.classList.value+="class-name class-2";
+            // li.style.display="none";
+            document.getElementById("liDOM").insertBefore(li,document.querySelector("#liDOM li")[0]);
+
+            console.log(document.querySelectorAll("#liDOM li")[0].nextElementSibling.nextElementSibling.innerText);
+        </script>
+    </body>
+</html>
