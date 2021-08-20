@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Jquery</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    </head>
+    <body onclick="bodyClick()">
+        <div>
+            <div class="container">
+                <ul>
+                    <li>
+                        <span>Span 1</span>
+                    </li>
+                </ul>
+                <p>Secret 1</p>
+            </div>
+            <div class="container">
+                <ul>
+                    <li>
+                        <span>Span 2</span>
+                    </li>
+                </ul>
+                <p>Secret 2</p>
+            </div>
+        </div>
+
+        <div style="background-color: blue; width: 100%; height: 300px" onclick="containerClick()">
+            <button style="margin: auto; display: block;" onclick="buttonClick(event)">CLick me</button>
+        </div>
+
+        <ul id="ul">
+
+        </ul>
+        <button id="button">Click to add</button>
+        <button id="remove">CLick to remove</button>
+        <script>
+            console.log(document.getElementsByTagName("p"));
+
+            console.log($("p"));
+
+            // let a = "Jagan";
+            // console.log("Hello"+a);
+            // console.log(`Hello${a}`);
+        </script>
+        <script>
+            function returnCorrespondingSecret(spanText) {
+                var spans = document.getElementsByTagName("span");
+                for(let span of spans) {
+                    if(span.innerText==spanText) {
+                        return (span.parentElement.parentElement.nextElementSibling.innerText);
+                    }
+                }
+            }
+
+            console.log(returnCorrespondingSecret("Span 1"));
+            console.log(returnCorrespondingSecret("Span 2"));
+        </script>
+        <script>
+            function jQueryReturn(spanText) {
+                let spans = $("span");
+                for(let span of spans) {
+                    if(span.innerText==spanText) {
+                        // closest is used to search up the dom tree
+                        // find is used to search down the dom tree        
+                        return ($(span).closest("ul").siblings()[0].innerText);
+                    }
+                }
+            }
+            console.log(jQueryReturn("Span 1"));
+            $("span").on("click",function() {
+                console.log("span clicked");
+            })
+
+            // event bubbling
+            // event gets bubbled up the DOM tree
+            function containerClick() {
+                console.log("containerClick");
+            }
+
+            function buttonClick(event) {
+                event.stopPropagation();
+                console.log("buttonClick");
+            }
+
+            function bodyClick() {
+                console.log("bodyClick");
+            }
+        </script>
+        <script>
+            $("#button").on("click", function() {
+                $("#ul").append("<li>List</li>");
+            })
+            $("#remove").on("click", function() {
+                let li = $("#ul li");
+                $(li[li.length-1]).remove();
+            })
+        </script>
+    </body>
+</html>
